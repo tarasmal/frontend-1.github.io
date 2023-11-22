@@ -12,3 +12,11 @@ const task2 = () => {
     flag2 = !flag2;
 }
 
+const changeImgSize = (operation) => {
+    const element = document.getElementById('city');
+    const step = 100;
+    element.style.width = (element.width + operation * step) + "px";
+    element.style.height = element.height + operation * step + "px";
+
+}
+
