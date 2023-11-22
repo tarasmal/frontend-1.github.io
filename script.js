@@ -12,6 +12,8 @@ const task2 = () => {
     flag2 = !flag2;
 }
 
+
+
 const changeImgSize = (operation) => {
     const element = document.getElementById('city');
     const step = 100;
@@ -20,3 +22,21 @@ const changeImgSize = (operation) => {
 
 }
 
+const addImage = () => {
+
+    const element = document.getElementById('city');
+    const newImage = document.createElement('img');
+    newImage.src = element.src;
+    newImage.alt = element.alt;
+    newImage.height = element.height;
+    newImage.width = element.width;
+    element.parentNode.appendChild(newImage)
+
+}
+
+const deleteImage = () => {
+    const element = document.getElementById('city');
+    if (element) {
+        element.parentNode.removeChild(element);
+    }
+}
